@@ -51,10 +51,11 @@ function lloyd(array) {
     }
     for (i = 0; i < array.length; i++) {
         (array[i] === '') ? i:'';
+        let k = i;
+        ( (0 <= k <= 3) || (8 <= k <= 11 )) ? countLoyd++ : '';
     }    
-    let k = i;
-    ( (0 <= k <= 3) || (8 <= k <= 11 )) ? countLoyd++ : '';
     
+    console.log(countLoyd);
     return countLoyd;
 }
 // @description shuffles cards when page is refreshed / loads
