@@ -102,12 +102,15 @@ function startGame(){
 function moveEl(e) {
     
     let target = e.target;
-
-    if ((target.nextElementSibling != null) && (target.nextElementSibling.innerText === '') ) {
+    
+    if (((target.nextElementSibling != null) && (e.target != cards[3]) && (e.target != cards[7]) && (e.target != cards[11])) && (target.nextElementSibling.innerText === '') ) {
+        console.log('next');
+        console.log (e.target == cards[12])
         let temp = target.innerText;
         target.nextElementSibling.innerText = temp;
         target.innerText = '';
-    } else if ((target.previousElementSibling != null) && (target.previousElementSibling.innerText === '')) {
+    } else if (((target.previousElementSibling != null) && (e.target != cards[12]) && (e.target != cards[8]) && (e.target != cards[4])) && (target.previousElementSibling.innerText === '')) {
+        console.log('prev');
         let temp = target.innerText;
         target.previousElementSibling.innerText = temp;
         target.innerText = '';
